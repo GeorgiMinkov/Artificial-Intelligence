@@ -24,7 +24,6 @@ public class Solver {
 		try {
 			bound = board.getHeuristicCostEstimate();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return;
 		}
@@ -54,11 +53,11 @@ public class Solver {
 	}
 	
 	private int search(Board board, int g, int bound) {
+		System.out.println("search -> with exploredNodes->" + exploredNodes);
 		int f = -1;
 		try {
 			f = g + board.getHeuristicCostEstimate();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return -1;
 		}

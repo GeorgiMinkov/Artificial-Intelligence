@@ -53,15 +53,17 @@ public class SolverTest {
 			
 			solver = new Solver(initialState, indexOfZero);
 			solver.solve();
-			Stack<String> pathOfZero = solver.getPathOfZero();
-			System.out.println(pathOfZero.size());
-			
-			System.out.println("Moves of the zero:");
-			pathOfZero.stream().forEach(System.out::println);
+			// if we want the move of zero then we need to uncomment this section
+//			Stack<String> pathOfZero = solver.getPathOfZero();
+//			System.out.println(pathOfZero.size());
+//			
+//			System.out.println("Moves of the zero:");
+//			pathOfZero.stream().forEach(System.out::println);
 
 
 			System.out.println("Moves of the game:");
 			Stack<Direction> gamePath = solver.getGamePath();
+			System.out.println(gamePath.size());
 			gamePath.stream().forEach(System.out::println);
 			
 		} catch (Exception e) {
@@ -72,28 +74,8 @@ public class SolverTest {
 	}
 
 	public static void main(String[] args) {
-//		int[] currentState = {1, 3, 2, 5, 0, 7, 8, 4, 6};
-//		Solver solver;
-//		try {
-//			solver = new Solver(currentState, -1);
-//			solver.solve();
-//			Stack<String> path = solver.getPath();
-//			System.out.println(path.size());
-//			
-//			path.stream().forEach(System.out::println);
-//			
-//			System.out.println();
-//			System.out.println(path);
-//			
-//		} catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		
-		
-		executeFromFile("test.txt");
-		
-		
+
+		executeFromFile("test.txt");		
 	}
 
 }
